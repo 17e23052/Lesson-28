@@ -30,5 +30,9 @@ for letter in password:
     new_word = new_word + random_char
   else:
     new_word = new_word + letter
-
-print(f"Your new password is {new_word}")
+print("Is your screen secure? If so, press y")
+secure = input().lower()
+if secure == "y":
+  print(f"Your new password is {new_word}")
+else:
+  print("Screen unsecure. System aborting. Please try again later")
