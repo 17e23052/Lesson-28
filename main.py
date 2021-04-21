@@ -30,9 +30,13 @@ for letter in password:
     new_word = new_word + random_char
   else:
     new_word = new_word + letter
-print("Is your screen secure? If so, press y")
-secure = input().lower()
-if secure == "y":
-  print(f"Your new password is {new_word}")
+if len(new_word) < 12:
+  print(f"Word must be at least 12 characters. This is only {len(new_word)} characters.")
+  print("System aborting. Please try again later.")
 else:
-  print("Screen unsecure. System aborting. Please try again later")
+  print("Is your screen secure? If so, press y and enter")
+  secure = input().lower()
+  if secure == "y":
+    print(f"Your new password is {new_word}")
+  else:
+    print("Screen unsecure. System aborting. Please try again later")
